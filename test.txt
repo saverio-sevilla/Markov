@@ -1,0 +1,5 @@
+abc := ab
+ab := a
+aa := d
+dd := x
+abcabcabcabc
