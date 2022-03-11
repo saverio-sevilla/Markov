@@ -10,15 +10,27 @@ At this stage the language supports 2 types of statements: rules of type
 lhs := rhs
 ```
 and _one single_ input string (this is simply represented by a string without the := token)
-Whitespace at the beginning and end of the rhs and lhs expression is removes, whitespace in the input string is not.
+Whitespace at the beginning and end of the rhs and lhs expression is removes, whitespace in the input string is not. For the same reason it's best to have no lines containing only whitespace or they will be consider inputs
 
 ## Examples
-
+The algorithm below (contained in bin_test.txt) will transform the binary number passed as input into a string containing a number of '|' chars equal to the decimal representation of the number
 ```
 |0 := 0||
 1 := 0|
 0 := 
 
 11110
+```
+This algorithm will add 1 to a binary number passed as input (enclosed in underscores)
+```
+1_:= 1++
+0_ := 1
+01++ := 10
+11++ := 1++0
+_0 := _
+_1++ := 10
+__ := 1
+
+_1111111111_
 ```
 
